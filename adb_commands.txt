@@ -1,0 +1,18 @@
+https://developer.android.com/studio/command-line/adb
+
+adb start-server
+adb kill-server
+adb devices -l
+adb -s name_of_device_u_need
+adb -e (if only one of multiple is emulator)
+adb -d (if only one of multiple is device)
+adb install '/c/Users/.../todolist_app.apk
+adb shell screencap -p sdcard/scr.png
+adb shell rm -r sdcard/scr.png
+adb pull sdcard/scr.png /c/workspace/QA_start/git_repo/AndroidStudio/
+adb push /c/workspace/QA_start/git_repo/AndroidStudio/scr.png sdcard/
+adb logcat
+adb logcat | findstr somthing > '/c/user/.../log.log'
+	//connecting to device using wi-fi
+adb tcpip 5555 //with USB connection than disconnect
+adb connect 'device IP address'
